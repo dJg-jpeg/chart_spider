@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <nav style="margin-bottom: 20px; border-bottom: 2px solid;">
+        <h3>{{title}}</h3>
+      </nav>
+      <h4>From Discogs</h4>
+      <article>
+        <ol>
+        {% for d_album in discogs %}
+          <li>
+            <p>{{d_album}}</p>
+          </li>
+        {% endfor %}
+        </ol>
+      </article>
+      <h4>From charts</h4>
+      <article>
+        <ol>
+        {% for c_album in charts %}
+          <li>
+            <p>{{c_album}}</p>
+          </li>
+        {% endfor %}
+        </ol>
+      </article>
+    </main>
+  </body>
+</html>
